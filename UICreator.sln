@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UICreator", "UICreator\UICreator.csproj", "{34A66CC6-67D6-48BD-8D13-61DB22B9133B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34A66CC6-67D6-48BD-8D13-61DB22B9133B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34A66CC6-67D6-48BD-8D13-61DB22B9133B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34A66CC6-67D6-48BD-8D13-61DB22B9133B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34A66CC6-67D6-48BD-8D13-61DB22B9133B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D69ABEF6-1657-43A4-B397-3FDD42AF4923}
+	EndGlobalSection
+EndGlobal
