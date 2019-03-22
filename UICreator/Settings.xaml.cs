@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UICreator.Classes;
 
 namespace UICreator
 {
@@ -20,9 +21,16 @@ namespace UICreator
     /// </summary>
     public partial class Settings : Page
     {
+        List<Setting> settings = new List<Setting>();
         public Settings()
         {
             InitializeComponent();
+            settings.Add(new Setting("Server URL", ""));
+            settings.Add(new Setting("User Name", ""));
+            settings.Add(new Setting("Password", ""));
+            settings.Add(new Setting("Bot Name", ""));
+            settings.Add(new Setting("History Path", ""));
+            SettingGridControl.ItemsSource = settings;
         }
     }
 }

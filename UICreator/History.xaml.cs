@@ -12,17 +12,25 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UICreator.Classes;
 
 namespace UICreator
 {
     /// <summary>
     /// Interaction logic for History.xaml
-    /// </summary>
+    /// </summary
+    /// 
+
     public partial class History : Page
     {
+        List<Taskclass> histories = new List<Taskclass>();
         public History()
         {
             InitializeComponent();
+            histories.Add(new Taskclass("144738465", "ADD_Customer", "FlowName", DateTime.Now, "2:07", "SUCESS", "filepath", "LogPath"));
+            histories.Add(new Taskclass("144738462", "ADD_Customer", "FlowName", DateTime.Now, "2:07", "SUCESS", "filepath", "LogPath"));
+            histories.Add(new Taskclass("144738444", "ADD_Customer", "FlowName", DateTime.Now, "2:07", "SUCESS", "filepath", "LogPath"));
+            HistoryGridControl.ItemsSource = histories;
         }
     }
 }

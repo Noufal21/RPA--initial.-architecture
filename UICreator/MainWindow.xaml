@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:UICreator"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:dxwui="http://schemas.devexpress.com/winfx/2008/xaml/windowsui" x:Class="UICreator.MainWindow"
-        mc:Ignorable="d" Height="600" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Foreground="White">
+        mc:Ignorable="d" Height="600" Width="800" WindowStartupLocation="CenterScreen" Foreground="White" Loaded="Window_Loaded" Title="BotExpress" ShowInTaskbar="False" Topmost="True">
     <Window.Resources>
         <Storyboard x:Key="MenuOpen">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
@@ -40,7 +40,7 @@
     <Grid Background="WhiteSmoke">
         <Grid Height="50" VerticalAlignment="Top" Background="#FF4C9CFD">
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Image Width="250" Source="C:\Users\iNNiDataEmployee\source\repos\UICreator\UICreator\Icons\logo-06-png.png" />
+                <Image Width="250" Source=".\Icons\logo-06-png.png" />
             </StackPanel>
             <StackPanel VerticalAlignment="Top" Orientation="Horizontal" HorizontalAlignment="Right"  Margin="0,0,10,0">
 
@@ -49,8 +49,8 @@
             </StackPanel>
             <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,10,0">
 
-                <TextBlock Text="Connected" />
-                <Ellipse  Height="8" Width="8" Fill="#FF35FD5C" Margin="5,2,0,0"/>
+                <TextBlock  Text="{Binding StatusText , UpdateSourceTrigger=PropertyChanged}" />
+                <Ellipse  Height="8" Width="8" Fill="{Binding StatusColor , UpdateSourceTrigger=PropertyChanged}" Margin="5,2,0,0"/>
             </StackPanel>
 
         </Grid>
@@ -93,7 +93,7 @@
 
             </StackPanel>
         </Grid>
-        <Grid x:Name="MainViewGrid"  HorizontalAlignment="Left" Margin="65,55,0,0" VerticalAlignment="Top" Height="545" Width="735">
+        <Grid x:Name="MainViewGrid"  HorizontalAlignment="Left" Margin="65,55,0,0" VerticalAlignment="Top" Height="504" Width="717">
             <Frame x:Name="MainFrame" Navigated="MainFrame_Navigated"  NavigationUIVisibility="Hidden" />
         </Grid>
     </Grid>

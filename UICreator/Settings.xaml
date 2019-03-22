@@ -1,15 +1,28 @@
-﻿<Page x:Class="UICreator.Settings"
+﻿<Page
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:UICreator"
+      xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:Classes="clr-namespace:UICreator.Classes" xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" x:Class="UICreator.Settings"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Settings">
 
-    <Grid Background="#FFD3B6B6">
-        <TextBlock Text="Settings" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    <Page.Resources>
+        <dx:IEnumerableDataSource x:Key="IEnumerableDataSource">
+            <dx:DesignDataManager.DesignData>
+                <dx:DesignDataSettings DataObjectType="{x:Type Classes:Setting}" RowCount="5"/>
+            </dx:DesignDataManager.DesignData>
+        </dx:IEnumerableDataSource>
+    </Page.Resources>
 
+    <Grid Background="#FFD3B6B6">
+        
+        <dxg:GridControl x:Name="SettingGridControl" AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ItemsSource="{Binding Data, Source={StaticResource IEnumerableDataSource}}">
+            <dxg:GridControl.View>
+                <dxg:TableView AllowPerPixelScrolling="True" ShowTotalSummary="True" NavigationStyle="Row" NewItemRowPosition="Top"/>
+            </dxg:GridControl.View>
+        </dxg:GridControl>
     </Grid>
 </Page>
